@@ -1,0 +1,14 @@
+{
+  "name": "vk_messages_remover",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc && esbuild src/index.ts --bundle --outfile=dist/devtools-script.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.1",
+    "typescript": "^5.5.3"
+  },
+  "private": true
+}

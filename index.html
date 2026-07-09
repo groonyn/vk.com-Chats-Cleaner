@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VK Chat Cleaner - Usage Guide</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            color: #667eea;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        h2 {
+            color: #764ba2;
+            margin-top: 30px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .success {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .code-block {
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+        .step {
+            background: #f9f9f9;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .step strong {
+            color: #667eea;
+        }
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .feature {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .feature strong {
+            color: #667eea;
+            font-size: 18px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background: #f5f5f5;
+            font-weight: bold;
+            color: #667eea;
+        }
+        tr:hover {
+            background: #f9f9f9;
+        }
+        .emoji {
+            font-size: 24px;
+            margin-right: 5px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><span class="emoji">🗑️</span> VK Messenger Chat Cleaner</h1>
+        <p>A powerful DevTools script to permanently delete all chat histories from your VK profile.</p>
+
+        <div class="success">
+            <strong>✅ Setup Complete!</strong> Your cleaner is ready to use.
+        </div>
+
+        <h2>Quick Start (3 Steps)</h2>
+
+        <div class="step">
+            <strong>Step 1: Copy the Script</strong>
+            <p>Open the file: <code>dist/devtools-script.js</code></p>
+            <p>Select all code (Ctrl+A) and copy it.</p>
+        </div>
+
+        <div class="step">
+            <strong>Step 2: Open DevTools</strong>
+            <p>Go to VK.com → Press <strong>F12</strong> → Click <strong>Console</strong> tab</p>
+        </div>
+
+        <div class="step">
+            <strong>Step 3: Paste & Run</strong>
+            <p>Paste the code into console and press Enter, then type:</p>
+            <div class="code-block">startVKCleaner()</div>
+        </div>
+
+        <h2>Features</h2>
+        <div class="features">
+            <div class="feature">
+                <div class="emoji">⚡</div>
+                <strong>Fast</strong>
+                <p>Batch processing with smart rate limiting</p>
+            </div>
+            <div class="feature">
+                <div class="emoji">📊</div>
+                <strong>Live Progress</strong>
+                <p>Real-time console feedback with stats</p>
+            </div>
+            <div class="feature">
+                <div class="emoji">🔒</div>
+                <strong>Secure</strong>
+                <p>Uses official VK public API</p>
+            </div>
+            <div class="feature">
+                <div class="emoji">⚠️</div>
+                <strong>Safe</strong>
+                <p>Requires explicit confirmation</p>
+            </div>
+        </div>
+
+        <h2>How It Works</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Step</th>
+                    <th>What Happens</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1. Validate</td>
+                    <td>Checks if you're logged into VK and API is accessible</td>
+                </tr>
+                <tr>
+                    <td>2. Fetch</td>
+                    <td>Retrieves all your conversation IDs with pagination</td>
+                </tr>
+                <tr>
+                    <td>3. Confirm</td>
+                    <td>Shows dialog asking for final confirmation</td>
+                </tr>
+                <tr>
+                    <td>4. Delete</td>
+                    <td>Permanently deletes each conversation (350ms apart)</td>
+                </tr>
+                <tr>
+                    <td>5. Report</td>
+                    <td>Shows final statistics and execution time</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Important Warnings</h2>
+        <div class="warning">
+            <strong>⚠️ IRREVERSIBLE!</strong> Deleted conversations cannot be recovered. Think twice before confirming deletion.
+        </div>
+        <div class="warning">
+            <strong>⚠️ NO BACKUP!</strong> This permanently removes all chat histories. There's no undo button.
+        </div>
+
+        <h2>Requirements</h2>
+        <ul>
+            <li>✅ Google Chrome browser</li>
+            <li>✅ Active VK.com session (you must be logged in)</li>
+            <li>✅ Access to DevTools (F12)</li>
+            <li>✅ Working internet connection</li>
+        </ul>
+
+        <h2>Troubleshooting</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Problem</th>
+                    <th>Solution</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>"Cannot access VK API"</td>
+                    <td>Log in to VK.com first, then refresh the page</td>
+                </tr>
+                <tr>
+                    <td>Script doesn't appear</td>
+                    <td>Make sure you pasted in the Console tab, not elsewhere</td>
+                </tr>
+                <tr>
+                    <td>Deletion is very slow</td>
+                    <td>This is normal - rate limiting protects your account</td>
+                </tr>
+                <tr>
+                    <td>"Too many requests" error</td>
+                    <td>VK rate limiting - script will retry automatically</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Project Files</h2>
+        <div class="code-block">
+vk_messages_remover/
+├── src/
+│   ├── vkapi.ts          ← VK API client
+│   ├── progress.ts       ← Console UI
+│   ├── cleaner.ts        ← Main deletion logic
+│   └── index.ts          ← Entry point
+├── dist/
+│   ├── devtools-script.js ← Use this! 🎯
+│   └── *.js              ← Compiled TypeScript
+├── README.md             ← Full documentation
+├── QUICKSTART.md         ← Quick reference
+└── package.json          ← Project config
+        </div>
+
+        <h2>FAQ</h2>
+        <h3>Q: Will this affect my VK profile?</h3>
+        <p>No, only chat messages are deleted. Your profile, friends, posts stay intact.</p>
+
+        <h3>Q: Can deleted messages be recovered?</h3>
+        <p>No, deletion is permanent and irreversible.</p>
+
+        <h3>Q: Will VK ban my account?</h3>
+        <p>No, this uses the official public API with normal rate limits.</p>
+
+        <h3>Q: How long does it take?</h3>
+        <p>Approximately 350ms per conversation (e.g., 100 chats = ~35 seconds).</p>
+
+        <h3>Q: Do I need an API token?</h3>
+        <p>No, it uses your existing browser session authentication.</p>
+
+        <div class="success">
+            <strong>You're all set!</strong> Head to the console and start cleaning. 🗑️
+        </div>
+
+        <footer>
+            <p>Made with ❤️ for privacy-conscious VK users</p>
+            <p>For technical details, see README.md and QUICKSTART.md</p>
+        </footer>
+    </div>
+</body>
+</html>
