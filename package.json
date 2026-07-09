@@ -1,14 +1,41 @@
 {
-  "name": "vk_messages_remover",
+  "name": "vk-chats-cleaner",
   "version": "1.0.0",
-  "description": "",
+  "description": "Delete all VK messenger chats instantly via CLI or programmatic API",
   "main": "dist/index.js",
+  "bin": {
+    "vk-chats-cleaner": "./index.js"
+  },
+  "files": [
+    "dist/",
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
-    "build": "tsc && esbuild src/index.ts --bundle --outfile=dist/devtools-script.js"
+    "build": "tsc && esbuild src/index.ts --bundle --outfile=dist/devtools-script.js",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "vk",
+    "vkontakte",
+    "chat",
+    "cleaner",
+    "messages",
+    "delete",
+    "cli"
+  ],
+  "author": "groonyn",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/groonyn/vk-chats-cleaner"
+  },
+  "engines": {
+    "node": ">=16"
   },
   "devDependencies": {
     "esbuild": "^0.28.1",
     "typescript": "^5.5.3"
-  },
-  "private": true
+  }
 }

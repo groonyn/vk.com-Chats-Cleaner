@@ -1,0 +1,21 @@
+# Sensitive files — NEVER publish
+.env
+.env.*
+!.env.example
+
+# Source TypeScript (compiled output in dist/ is what users need)
+src/
+
+# Dev/build config
+tsconfig.json
+.gitignore
+.idea/
+.DS_Store
+
+# Test / scratch
+*.test.*
+*.spec.*
+
+# Logs
+*.log
+npm-debug.log*
