@@ -1,6 +1,6 @@
 # VK Chat Cleaner
 
-Delete all VK messenger chats instantly. tons of conversations ready.**
+Delete all VK messenger chats instanty - tons of conversations ready.**
 
 ## Quick Start
 
