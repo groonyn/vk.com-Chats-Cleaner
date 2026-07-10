@@ -1,6 +1,6 @@
 # VK Chat Cleaner
 
-Delete all VK messenger chats instantly. **868 conversations ready.**
+Delete all VK messenger chats instantly. tons of conversations ready.**
 
 ## Quick Start
 
@@ -48,13 +48,13 @@ node index.js <your-token>
 
 1. Reads token from `.env` file (or CLI/env var)
 2. Validates token with your VK account
-3. Fetches all 868+ conversations
+3. Fetches all conversations
 4. Shows preview in dry-run mode
 5. Asks confirmation (type `DELETE`)
 6. Deletes all chats bilaterally (500ms each with retries)
 7. Shows final stats
 
-**Time:** ~7 minutes | **Mode:** Bilateral delete ✓
+**Time:** ~5-10 minutes | **Mode:** Bilateral delete ✓
 
 ## Important
 
